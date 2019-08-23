@@ -1,7 +1,7 @@
 const signUpForm = document.querySelector('#signup-form');
 const logoutBtn = document.querySelectorAll('#logout');
 const loginForm = document.querySelector('#login-form');
-const adminForm = document.querySelector('.admin-actions');
+const adminForm = document.querySelector('.admin-form');
 
 
 adminForm.addEventListener('submit', (et)=> {
