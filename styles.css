@@ -1,0 +1,33 @@
+
+
+.navbtn{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.logged-out, .logged-in, .admin-logged-in{
+    display: none;
+}
+
+.mainbody{
+    margin-top: 20px;
+}
+
+.admin-actions{
+    max-width: 300px;
+    margin: 40px auto;
+}
+
+.nav{
+    background-color: #334480;
+}
+
+.d-none{
+    display: none;
+}
+
+hr{
+    border-color: rgba(255, 255, 255, .2);
+    border-width: 1px;
+}
