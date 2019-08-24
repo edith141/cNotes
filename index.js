@@ -130,7 +130,7 @@ const displayNotes = (notes) => {
 
     else {
         notesList.innerHTML = `<blockquote> <h4>
-        This is an example quotation that uses the blockquote tag.<h4>
+        No memos published or you have insufficient permissions to view.<h4>
         </blockquote>
         `;
     }
