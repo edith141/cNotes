@@ -1,4 +1,48 @@
+body{
+    background-color: #A9BCD0;
+}
 
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: rgba(245, 245, 245, 0);
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: rgba(245, 245, 245, 0);
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 0 6px rgba(4, 31, 53, 0.3);
+	background-color: rgba(0, 47, 75, 0.267);
+}
+
+
+
+.cardcolor .card-content{
+    /* background-color: #D8DBE2; */
+    /* background-color: #58A4B0; */
+    /* color: #172121 */
+    min-height: 150px;
+}
+
+.card-action>span{
+    color: #D93C30;
+    /* background-color: #D93C30; */
+}
+
+.card-reveal {
+    background-color: #D8DBE2;
+}
+
+.fba{
+    background-color: #D93C30;
+}
 
 .navbtn{
     border: 0px;
@@ -30,4 +74,10 @@
 hr{
     border-color: rgba(255, 255, 255, .2);
     border-width: 1px;
+}
+
+.notes{
+    /* overflow-y: hidden; */
+    height: 80%;
+    overflow-y: scroll;
 }
