@@ -83,12 +83,12 @@ hr{
 }
 
 
-.trnc {
+/* .truncate {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
+  } */
 
-.trnc:hover, .trnc:active, .trnc:focus {
+.truncate:active, .truncate:hover, .truncate:focus{
     white-space: pre-line;
 }

@@ -97,7 +97,7 @@ const displayNotes = (notes) => {
                     <div class="card-content">
                         <span class="card-title">${notesContent.Title}</span>
                         <hr>
-                        <p class="para trnc">${notesContent.TextContent}</p>
+                        <p class="para truncate">${notesContent.TextContent}</p>
                         
                     </div>
                     <div class="card-action grey lighten-3 activator">
@@ -108,7 +108,7 @@ const displayNotes = (notes) => {
                         <span class="card-title grey-text text-darken-4">${notesContent.Title}<i class="material-icons right">close</i></span>
                         <p>By: ${notesContent.By}</p>
                     <p>On: ${notesContent.Timeofnote.toDate().toLocaleDateString("en-US", options)}</p>
-                    <div class="center-align">
+                    <div class="card-action">
                         <div class="left">
                         <a class="waves-effect waves-light btn-small red lighten-1" 
                             href="mailto:${curUserEmail}?subject=Replying%20for%20memo:%20${notesContent.Title}
