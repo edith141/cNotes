@@ -8,14 +8,15 @@ const adminElems = document.querySelectorAll('.admin-logged-in');
 const acname = document.querySelector('.acname');
 const acemail = document.querySelector('.acemail');
 let curUser = undefined;
-curUserEmail = undefined;
+let curUserEmail = undefined;
+
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
 const copy = (copyText) => {
 //   copyText.select();
 
 var textArea = document.createElement("textarea");
-  textArea.value = copyText;
+  textArea.value = copyText.replace(/\\n/g, "\n");
   textArea.style.visibility = 'none';
   document.body.appendChild(textArea);
   textArea.focus();
@@ -96,7 +97,7 @@ const displayNotes = (notes) => {
                     <div class="card-content">
                         <span class="card-title">${notesContent.Title}</span>
                         <hr>
-                        <p class="truncate">${notesContent.TextContent}</p>
+                        <p class="para trnc">${notesContent.TextContent}</p>
                         
                     </div>
                     <div class="card-action grey lighten-3 activator">
@@ -115,10 +116,11 @@ const displayNotes = (notes) => {
                             %0APublished%20at:%20${notesContent.Timeofnote.toDate().toLocaleDateString("en-US", options)}
                             %0A*******TYPE YOUR REPLY BELOW THIS LINE*******%0A%0A">
                         <i class="material-icons right">email</i>reply</a></div>
-                        <div class="right"><a class="waves-effect waves-light btn-small" onclick="copy('${notesContent.TextContent}')"><i class="material-icons right">file_copy</i>copy</a></div>
-                    </div>
+                        <div class="right"><a class="waves-effect waves-light btn-small" onclick="copy('${String(notesContent.TextContent).replace(/\'/g, "\\'").replace(/\n/g, "\\n")}')"><i class="material-icons right">file_copy</i>copy</a></div>
+
                     </div>  
                 </div>
+            </div>
             </div>`;
             cardsHtml += noteCard;
         });

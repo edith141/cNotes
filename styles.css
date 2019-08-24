@@ -81,3 +81,14 @@ hr{
     height: 80%;
     overflow-y: scroll;
 }
+
+
+.trnc {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+.trnc:hover, .trnc:active, .trnc:focus {
+    white-space: pre-line;
+}
