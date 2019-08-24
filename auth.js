@@ -4,12 +4,12 @@ const loginForm = document.querySelector('#login-form');
 const adminForm = document.querySelector('.admin-form');
 
 
-adminForm.addEventListener('submit', (et)=> {
+adminForm.addEventListener('submit', (et) => {
     et.preventDefault();
     const adminEmail = adminForm['admin-email'].value;
     const makeAdmin = functions.httpsCallable('addAdminRole');
     console.log(adminEmail);
-    makeAdmin({email: adminEmail}).then((result) => {
+    makeAdmin({ email: adminEmail }).then((result) => {
         console.log(result);
     });
 });
@@ -23,7 +23,7 @@ auth.onAuthStateChanged((user) => {
             UI(user);
         })
         console.log(user);
-       
+
         db.collection('Notes').onSnapshot((snapshot) => {
             displayNotes(snapshot.docs);
         })
@@ -39,7 +39,7 @@ signUpForm.addEventListener('submit', e => {
     e.preventDefault();
     const email = signUpForm['signup-email'].value;
     const password = signUpForm['signup-password'].value;
-    
+
     auth.createUserWithEmailAndPassword(email, password).then((cred) => {
         console.log('Signed Up!', cred);
         db.collection('users').doc(cred.user.uid).set({

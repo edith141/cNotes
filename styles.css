@@ -4,7 +4,7 @@ body{
 
 ::-webkit-scrollbar-track
 {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
 	border-radius: 10px;
 	background-color: rgba(245, 245, 245, 0);
 }
@@ -28,12 +28,12 @@ body{
     /* background-color: #D8DBE2; */
     /* background-color: #58A4B0; */
     /* color: #172121 */
-    min-height: 150px;
+    min-height: 165px;
 }
 
-.card-action>span{
-    color: #D93C30;
-    /* background-color: #D93C30; */
+.card .card-reveal{
+    /* min-width: 500px; */
+    padding-bottom: 5px;
 }
 
 .card-reveal {

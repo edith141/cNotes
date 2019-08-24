@@ -13,27 +13,27 @@ let curUserEmail = undefined;
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
 const copy = (copyText) => {
-//   copyText.select();
+    //   copyText.select();
 
-var textArea = document.createElement("textarea");
-  textArea.value = copyText.replace(/\\n/g, "\n");
-  textArea.style.visibility = 'none';
-  document.body.appendChild(textArea);
-  textArea.focus();
-  textArea.setSelectionRange(0, 99999);
-  textArea.select();
-  document.execCommand("copy");
-  document.body.removeChild(textArea);
-  console.log(String(copyText));
-//   M.toast({html: 'I am a toast!'})
-  M.toast({html: 'Copied!'})
+    var textArea = document.createElement("textarea");
+    textArea.value = copyText.replace(/\\n/g, "\n");
+    textArea.style.visibility = 'none';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.setSelectionRange(0, 99999);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+    console.log(String(copyText));
+    //   M.toast({html: 'I am a toast!'})
+    M.toast({ html: 'Copied!' })
 }
 
 const UI = (userID) => {
-    
+
     if (userID) {
         curUserEmail = userID.email;
-        if (userID.admin){
+        if (userID.admin) {
             console.log(userID.admin);
             adminElems.forEach((elem) => {
                 elem.style.display = 'block';
@@ -71,9 +71,9 @@ const UI = (userID) => {
         })
     }
     else {
-            adminElems.forEach((elem) => {
-                elem.style.display = 'none';
-            })
+        adminElems.forEach((elem) => {
+            elem.style.display = 'none';
+        })
         loggedInLinks.forEach((link) => {
             link.style.display = 'none';
         })
@@ -93,7 +93,7 @@ const displayNotes = (notes) => {
             const notesContent = doc.data();
             const noteCard = `
             <div class="col s12 m6">
-                <div class="card hoverable cardcolor grey lighten-4">
+                <div class="card hoverable grey lighten-4 cardcolor">
                     <div class="card-content">
                         <span class="card-title">${notesContent.Title}</span>
                         <hr>
@@ -108,7 +108,8 @@ const displayNotes = (notes) => {
                         <span class="card-title grey-text text-darken-4">${notesContent.Title}<i class="material-icons right">close</i></span>
                         <p>By: ${notesContent.By}</p>
                     <p>On: ${notesContent.Timeofnote.toDate().toLocaleDateString("en-US", options)}</p>
-                    <div class="card-action">
+                    <div class="">
+                    <div class="divider"></div></br>
                         <div class="left">
                         <a class="waves-effect waves-light btn-small red lighten-1" 
                             href="mailto:${curUserEmail}?subject=Replying%20for%20memo:%20${notesContent.Title}
@@ -117,7 +118,6 @@ const displayNotes = (notes) => {
                             %0A*******TYPE YOUR REPLY BELOW THIS LINE*******%0A%0A">
                         <i class="material-icons right">email</i>reply</a></div>
                         <div class="right"><a class="waves-effect waves-light btn-small" onclick="copy('${String(notesContent.TextContent).replace(/\'/g, "\\'").replace(/\n/g, "\\n")}')"><i class="material-icons right">file_copy</i>copy</a></div>
-
                     </div>  
                 </div>
             </div>
@@ -153,12 +153,12 @@ newNoticeForm.addEventListener('submit', (e) => {
         TextContent: newNoticeForm['content'].value,
         By: curUser,
         Timeofnote: firebase.firestore.Timestamp.now()
-    }).then(()=>{
+    }).then(() => {
         const modal = document.querySelector('#modal-create');
         M.Modal.getInstance(modal).close();
         newNoticeForm.reset();
         console.log('ADDED!')
-    }).catch((error)=>{
+    }).catch((error) => {
         console.log(error.message);
     })
 })
