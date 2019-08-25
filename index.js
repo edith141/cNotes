@@ -1,3 +1,21 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyDOsArKM1Hn5t66_uj7r1e1w2IpmuvGBNg",
+    authDomain: "cnotes-6220f.firebaseapp.com",
+    databaseURL: "https://cnotes-6220f.firebaseio.com",
+    projectId: "cnotes-6220f",
+    storageBucket: "",
+    messagingSenderId: "121704679791",
+    appId: "1:121704679791:web:1555704f89082c7a"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+const functions = firebase.functions();
+
+
 M.AutoInit();
 const notesList = document.querySelector('.notes');
 const loggedInLinks = document.querySelectorAll('.logged-in');

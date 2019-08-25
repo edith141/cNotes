@@ -1,5 +1,4 @@
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +6,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <title>Document</title>
+        <title>cMemo</title>
     </head>
 
     <body>
-
-
         <!-- Navbar -->
         <div class="navbar-fixed ">
             <nav class="nav z-depth-0">
@@ -48,15 +45,6 @@
                     </div>
 
                 </div>
-                <!-- <div class="nav-content">
-                    <ul class="tabs tabs-transparent">
-                        <li class="tab"><a href="#test1">Test 1</a></li>
-                        <li class="tab"><a class="active" href="#test2">Test 2</a></li>
-                        <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
-                        <li class="tab"><a href="#test4">Test 4</a></li>
-                    </ul>
-                </div> -->
-
             </nav>
         </div>
         <ul class="sidenav teal lighten-5" id="mobile-demo">
@@ -95,7 +83,6 @@
                 <a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a>
             </li>
         </ul>
-
 
         <!-- SIGN UP -->
         <div id="modal-signup" class="modal">
@@ -142,7 +129,6 @@
         <!-- ACCOUNT -->
         <div id="modal-account" class="modal">
             <div class="modal-content center-align">
-
                 <h4>Account details</h4><br />
                 <div class="account-details"></div>
                 <div class="divider"></div>
@@ -182,33 +168,13 @@
         </div>
 
         <!-- Compiled and minified JavaScript -->
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-functions.js"></script>
-        <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-                apiKey: "AIzaSyDOsArKM1Hn5t66_uj7r1e1w2IpmuvGBNg",
-                authDomain: "cnotes-6220f.firebaseapp.com",
-                databaseURL: "https://cnotes-6220f.firebaseio.com",
-                projectId: "cnotes-6220f",
-                storageBucket: "",
-                messagingSenderId: "121704679791",
-                appId: "1:121704679791:web:1555704f89082c7a"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-
-            const auth = firebase.auth();
-            const db = firebase.firestore();
-            const functions = firebase.functions();
-        </script>
         <script src="https://kit.fontawesome.com/33c4382f99.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="index.js"></script>
         <script src="auth.js"></script>
     </body>
-
 </html>
