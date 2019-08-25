@@ -24,7 +24,7 @@ auth.onAuthStateChanged((user) => {
         })
         console.log(user);
 
-        db.collection('Notes').onSnapshot((snapshot) => {
+        db.collection('Notes').orderBy("Timeofnote", "desc").onSnapshot((snapshot) => {
             displayNotes(snapshot.docs);
         })
     }
