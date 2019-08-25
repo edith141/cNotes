@@ -8,7 +8,7 @@ const adminElems = document.querySelectorAll('.admin-logged-in');
 const acname = document.querySelector('.acname');
 const acemail = document.querySelector('.acemail');
 let curUser = undefined;
-let curUserEmail = undefined;
+let creatorUserEmail = undefined;
 
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
@@ -32,8 +32,8 @@ const copy = (copyText) => {
 const UI = (userID) => {
 
     if (userID) {
-        curUserEmail = userID.email;
         if (userID.admin) {
+            creatorUserEmail = userID.email;
             console.log(userID.admin);
             adminElems.forEach((elem) => {
                 elem.style.display = 'block';
@@ -112,7 +112,7 @@ const displayNotes = (notes) => {
                     <div class="divider"></div></br>
                         <div class="left">
                         <a class="waves-effect waves-light btn-small red lighten-1" 
-                            href="mailto:${curUserEmail}?subject=Replying%20for%20memo:%20${notesContent.Title}
+                            href="mailto:${notesContent.creatorEmail}?subject=Replying%20for%20memo:%20${notesContent.Title}
                             &body=Memo%20Body:%20${notesContent.TextContent}
                             %0APublished%20at:%20${notesContent.Timeofnote.toDate().toLocaleDateString("en-US", options)}
                             %0A*******TYPE YOUR REPLY BELOW THIS LINE*******%0A%0A">
@@ -152,7 +152,8 @@ newNoticeForm.addEventListener('submit', (e) => {
         Title: newNoticeForm['title'].value,
         TextContent: newNoticeForm['content'].value,
         By: curUser,
-        Timeofnote: firebase.firestore.Timestamp.now()
+        Timeofnote: firebase.firestore.Timestamp.now(),
+        creatorEmail: creatorUserEmail
     }).then(() => {
         const modal = document.querySelector('#modal-create');
         M.Modal.getInstance(modal).close();
