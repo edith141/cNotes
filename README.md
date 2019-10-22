@@ -22,18 +22,10 @@ Example:
 
 [LIVE DEMO](https://hbd-mar-vell.000webhostapp.com/cMemo/index.html)
 
-### User Sidebar
+### User Sidebar, Create, main Memo screen
 *Ignore the webhost watermark. It is because I'm using free hosting for this.*
 
-![](https://i.gyazo.com/882b5fbb2e33a0f5682b5c5bfd5fbab4.png)
-
-### Main memo screen
-
-![](https://i.gyazo.com/8782dded4cb0861db79dd2be5e52f4b0.png)
-
-### New Memo
-
-![](https://i.gyazo.com/74d3b5de66f713ca3ac52ebe920a6301.png)
+![](https://i.gyazo.com/a3f44425936b403bda8c4b8e18ee02ef.png)
 
 
 ## Todo
