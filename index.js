@@ -1,12 +1,12 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyDOsArKM1Hn5t66_uj7r1e1w2IpmuvGBNg",
-    authDomain: "cnotes-6220f.firebaseapp.com",
-    databaseURL: "https://cnotes-6220f.firebaseio.com",
-    projectId: "cnotes-6220f",
+    apiKey: "your_key",
+    authDomain: "xx-xx-xx",
+    databaseURL: "xx-xx-xx",
+    projectId: "xx-xx-xx",
     storageBucket: "",
-    messagingSenderId: "121704679791",
-    appId: "1:121704679791:web:1555704f89082c7a"
+    messagingSenderId: "xx-xx-xx",
+    appId: "xx-xx-xx-xx-xx"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
