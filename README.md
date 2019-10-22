@@ -20,7 +20,7 @@ Example:
 * Copy contents to clipboard. (Toast notifications to indicated text has been copied)
 * Reply to the memo creator directly using mail. The memo body is automatically added to the mail body.
 
-[LIVE DEMO](https://csocial141.herokuapp.com/)
+[LIVE DEMO](https://hbd-mar-vell.000webhostapp.com/cMemo/index.html)
 
 ### User Sidebar
 *Ignore the webhost watermark. It is because I'm using free hosting for this.*
